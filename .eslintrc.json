@@ -1,0 +1,117 @@
+{
+  "extends": ["next/core-web-vitals", "prettier", "plugin:react-hooks/recommended"],
+  "plugins": [
+    "import",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "warn",
+    "import/no-namespace": [
+      "error",
+      {
+        "ignore": [
+          "styles"
+        ]
+      }
+    ],
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowArray": true,
+        "allowArrowFunction": false,
+        "allowAnonymousClass": false,
+        "allowAnonymousFunction": false,
+        "allowCallExpression": true,
+        "allowLiteral": true,
+        "allowObject": true
+      }
+    ],
+    "import/consistent-type-specifier-style": [
+      "error",
+      "prefer-top-level"
+    ],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@/app/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/components/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/utils/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/config",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/styles/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/fonts/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "@/assets/**",
+            "group": "internal",
+            "position": "after"
+          },
+          {
+            "pattern": "./**.module.scss",
+            "group": "sibling",
+            "position": "after"
+          },
+          {
+            "pattern": "../types",
+            "group": "type",
+            "position": "after"
+          },
+          {
+            "pattern": "./types",
+            "group": "type",
+            "position": "after"
+          },
+          {
+            "pattern": "@/global.types",
+            "group": "type",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "builtin"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "ignore"
+      }
+    ]
+  }
+}

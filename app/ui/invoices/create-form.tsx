@@ -1,13 +1,13 @@
 'use client';
 
-import { CustomerField } from '@/app/lib/definitions';
-import Link from 'next/link';
 import {
   CheckIcon,
   ClockIcon,
   CurrencyDollarIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import { CustomerField } from '@/app/lib/definitions';
 import { Button } from '../button';
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
