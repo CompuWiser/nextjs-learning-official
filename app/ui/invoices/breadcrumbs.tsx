@@ -1,10 +1,11 @@
 import { clsx } from 'clsx';
 import Link from 'next/link';
 import { lusitana } from '@/app/ui/fonts';
+import type { Route } from 'next';
 
 interface Breadcrumb {
   label: string;
-  href: string;
+  href: Route;
   active?: boolean;
 }
 
