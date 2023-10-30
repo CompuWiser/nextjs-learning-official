@@ -5,13 +5,13 @@
     "dev": "next dev -p 3333",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\""
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
+    "seed": "node -r dotenv/config ./scripts/seed.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@tailwindcss/forms": "^0.5.6",
     "@vercel/postgres": "^0.5.0",
-    "bcrypt": "^5.1.1",
     "clsx": "^2.0.0",
     "next": "^14.0.0",
     "react": "^18.2.0",
@@ -25,6 +25,7 @@
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "autoprefixer": "^10.4.16",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.3.1",
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.6",
@@ -32,8 +33,8 @@
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^3.0.3",
     "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "engines": {

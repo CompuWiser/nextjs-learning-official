@@ -1,6 +1,6 @@
 const { sql } = require('@vercel/postgres');
-const { invoices, customers, revenue, users } = require('../app/lib/placeholder-data.js');
 const bcrypt = require('bcrypt');
+const { invoices, customers, revenue, users } = require('../app/lib/placeholder-data.js');
 
 async function seedUsers() {
   try {
@@ -156,8 +156,8 @@ async function seedRevenue() {
 }
 
 (async () => {
-  await seedUsers();
-  await seedCustomers();
-  await seedInvoices();
+  // await seedUsers();
+  // await seedCustomers();
+  // await seedInvoices();
   await seedRevenue();
 })();
