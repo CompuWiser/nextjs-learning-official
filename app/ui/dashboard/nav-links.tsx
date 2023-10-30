@@ -4,8 +4,7 @@ import { DocumentDuplicateIcon, HomeIcon, UserGroupIcon } from '@heroicons/react
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-import type { UrlObject } from 'url';
+import type { Route } from 'next';
 
 type Icon = React.ForwardRefExoticComponent<
   Omit<React.SVGProps<SVGSVGElement>, 'ref'> & {
@@ -14,11 +13,9 @@ type Icon = React.ForwardRefExoticComponent<
   } & React.RefAttributes<SVGSVGElement>
 >;
 
-type Href = UrlObject | __next_route_internal_types__.RouteImpl<any>;
-
 type Links = {
   name: string;
-  href: Href;
+  href: Route;
   icon: Icon;
 }[];
 
